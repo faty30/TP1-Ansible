@@ -1,0 +1,17 @@
+---
+- hosts: httpd
+
+  vars:           
+    - use_perl: true
+    - vhost_domain: doumy1.com
+    - vhost_user: doumy1
+
+    - use_perl: true
+    - vhost_domain: doumy2.com
+    - vhost_user: doumy2
+
+
+  roles:
+    - webserver
+    - databases
+    - httpd-vhost

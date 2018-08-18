@@ -1,0 +1,7 @@
+---
+- name: 1. Install MariaDB 
+  yum: name=mariadb-server state=present
+
+- name: 2. Start MariaDB Service
+  service: name=mariadb state=started enabled=true
+
